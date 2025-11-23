@@ -1,0 +1,361 @@
+
+/* Container */
+.screening-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 50%, #f0f9ff 100%);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Card */
+.screening-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 20px 24px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.screening-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.screening-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.screening-subtitle {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* Question */
+.question-number {
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.question-context {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.question-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1f2937;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* Options */
+.option-button {
+  width: 100%;
+  padding: 12px 14px;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: all 0.15s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option-button:hover {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.option-days {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* ===== RESULTS PAGE ===== */
+
+.result-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Score Display */
+.score-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.score-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-width: 4px;
+  border-style: solid;
+}
+
+.score-number {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.score-max {
+  font-size: 10px;
+  color: #6b7280;
+}
+
+/* Severity Badge */
+.severity-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.severity-minimal { background: #d1fae5; color: #065f46; }
+.severity-mild { background: #fef9c3; color: #854d0e; }
+.severity-moderate { background: #fed7aa; color: #9a3412; }
+.severity-moderately-severe { background: #fecaca; color: #991b1b; }
+.severity-severe { background: #fecaca; color: #7f1d1d; }
+
+/* Crisis Box */
+.crisis-box {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-left: 4px solid #ef4444;
+  padding: 12px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 14px;
+}
+
+.crisis-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #991b1b;
+  margin-bottom: 4px;
+}
+
+.crisis-text {
+  font-size: 12px;
+  color: #b91c1c;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.crisis-hotline {
+  font-size: 12px;
+  color: #b91c1c;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/* MDD Screening Box */
+.mdd-box {
+  background: #fefce8;
+  border: 1px solid #fef08a;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 14px;
+  font-size: 11px;
+  color: #854d0e;
+  line-height: 1.5;
+}
+
+/* Section */
+.section {
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Domain Analysis */
+.domain-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 6px 0;
+}
+
+.domain-label {
+  width: 110px;
+  font-size: 11px;
+  color: #4b5563;
+}
+
+.domain-bar {
+  flex: 1;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  margin: 0 8px;
+  overflow: hidden;
+}
+
+.domain-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.domain-fill.low { background: #10b981; }
+.domain-fill.moderate { background: #f59e0b; }
+.domain-fill.high { background: #ef4444; }
+
+.domain-score {
+  width: 45px;
+  font-size: 10px;
+  color: #6b7280;
+  text-align: right;
+}
+
+/* Clinical Patterns */
+.pattern-box {
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.pattern-warning {
+  background: #fef3c7;
+  color: #92400e;
+  border-left: 3px solid #f59e0b;
+}
+
+.pattern-info {
+  background: #e0f2fe;
+  color: #0369a1;
+  border-left: 3px solid #0ea5e9;
+}
+
+/* Recommendation Box */
+.recommendation-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+.recommendation-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #166534;
+  margin-bottom: 4px;
+}
+
+.recommendation-text {
+  font-size: 12px;
+  color: #15803d;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Disclaimer */
+.disclaimer {
+  background: #f9fafb;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 14px;
+  font-size: 10px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.citation {
+  font-size: 9px;
+  color: #9ca3af;
+  margin-top: 8px;
+}
+
+/* Button */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
+.footer-note {
+  margin-top: 16px;
+  font-size: 10px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .screening-card {
+    padding: 16px 18px;
+    border-radius: 12px;
+  }
+  
+  .score-circle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .score-number {
+    font-size: 24px;
+  }
+}

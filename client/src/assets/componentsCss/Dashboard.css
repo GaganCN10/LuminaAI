@@ -1,0 +1,53 @@
+.card-grid {
+  display: grid;
+  
+  /* Fixed number of columns on desktop */
+  grid-template-columns: repeat(3, auto); /* auto so card width is fixed */
+  
+  gap: 20px;
+
+  justify-content: center; /* centers the entire grid in container */
+  padding: 20px;
+}
+
+.card {
+  width: 260px;       /* fixed width */
+  height: 200px;      /* fixed height */
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: 0.2s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  background: #f4faff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, auto); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+    justify-content: center;    /* center single column too */
+  }
+}
+
+.dashboardBody{
+  width: 100vw;
+  height: 100vh;
+}

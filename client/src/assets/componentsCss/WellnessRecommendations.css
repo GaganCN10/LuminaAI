@@ -1,0 +1,420 @@
+/* WellnessRecommendations.css */
+
+.wellness-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #c3cfe2, #6a7bd2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  animation: backgroundFade 20s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundFade {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.wellness-content {
+  max-width: 960px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 1.25rem;
+  box-shadow: 0 15px 40px rgba(69, 104, 220, 0.3);
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.wellness-content:hover {
+  box-shadow: 0 20px 50px rgba(69, 104, 220, 0.6);
+}
+
+/* Header */
+.wellness-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  color: #5a5bcf;
+}
+
+.header-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke-width: 1.8;
+  fill: #726fcf;
+  animation: pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.75; }
+}
+
+.header-title {
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: #4b49ac;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 6px rgba(106, 123, 210, 0.5);
+}
+
+.header-subtitle {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #6b6dd1;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* Button wrapper */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.recommendations-btn {
+  background: #7b79f9;
+  border: none;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(123, 121, 249, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.2s ease;
+  user-select: none;
+  letter-spacing: 0.04em;
+}
+
+.recommendations-btn:hover:not(:disabled) {
+  background: #5d59d1;
+  box-shadow: 0 14px 30px rgba(93, 89, 209, 0.65);
+  transform: translateY(-3px);
+}
+
+.recommendations-btn:disabled {
+  cursor: default;
+  opacity: 0.65;
+  box-shadow: none;
+}
+
+.btn-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke-width: 2;
+}
+
+.spotify-icon {
+  stroke: #1db954;
+  fill: none;
+}
+
+.youtube-icon {
+  stroke: #ff3d3d;
+  fill: none;
+}
+
+.reading-icon {
+  stroke: #6a64f1;
+  fill: none;
+}
+
+.sparkles {
+  stroke: #ffba00;
+}
+
+/* Loading Spinner */
+.spin {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error message */
+.error-message {
+  background-color: #ffdede;
+  color: #8b1c1c;
+  border: 1.5px solid #d9534f;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(219, 73, 73, 0.3);
+  animation: shake 0.8s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
+/* Recommendations Grid */
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+/* Recommendation Cards */
+.recommendation-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 5px 30px rgba(112, 129, 216, 0.3);
+  padding: 1.5rem 1.8rem 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.recommendation-card:hover {
+  box-shadow: 0 15px 60px rgba(106, 123, 210, 0.45);
+  transform: translateY(-6px);
+  border-color: #7b79f9;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+  color: #5e60f8;
+}
+
+.card-icon {
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Recommendation Items */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6a7bd2 transparent;
+}
+
+.card-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+  background-color: #6a7bd2;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.recommendation-item {
+  border-left: 4px solid transparent;
+  padding-left: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.recommendation-item:hover {
+  border-color: #7b79f9;
+  background: rgba(123, 121, 249, 0.12);
+  border-radius: 0.6rem;
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #4a4a9c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  user-select: text;
+}
+
+.item-title:hover,
+.item-title:focus {
+  color: #7b79f9;
+  text-decoration: underline;
+}
+
+.item-title-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #4a4a9c;
+  user-select: text;
+}
+
+.item-subtitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #7c7caa;
+  margin-top: 0.1rem;
+  font-style: italic;
+}
+
+.item-description {
+  font-size: 0.85rem;
+  color: #555a96;
+  margin-top: 0.3rem;
+  line-height: 1.3em;
+}
+
+/* Spotify color adjustments */
+.spotify-item .item-title {
+  color: #1db954;
+}
+.spotify-item:hover {
+  background: rgba(29, 185, 84, 0.15);
+}
+
+/* Youtube color adjustments */
+.youtube-item .item-title {
+  color: #ff3b3b;
+}
+.youtube-item:hover {
+  background: rgba(255, 59, 59, 0.12);
+}
+
+/* Reading color adjustments */
+.reading-item .item-title {
+  color: #6a64f1;
+}
+.reading-item:hover {
+  background: rgba(106, 100, 241, 0.12);
+}
+
+/* Support card */
+.support-card {
+  text-align: center;
+  margin-top: 2rem;
+  background: #e4e5f3;
+  border-radius: 1rem;
+  padding: 2.2rem 2.5rem;
+  box-shadow: 0 10px 40px rgba(69, 104, 220, 0.18);
+  color: #4e4a9c;
+}
+
+.support-icon {
+  width: 3rem;
+  height: 3rem;
+  stroke: #6a64f1;
+  stroke-width: 2.5;
+  margin-bottom: 1rem;
+  animation: heartbeat 2s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.support-title {
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  color: #5c57d2;
+}
+
+.support-description {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.support-disclaimer {
+  font-size: 0.9rem;
+  color: #7a7aba;
+  font-style: italic;
+  margin-top: 0.7rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .wellness-content {
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Add these styles to your WellnessRecommendations.css file */
+
+/* Exercise Icon Color */
+.exercise-icon {
+  color: #10b981; /* Green color for exercise */
+}
+
+/* Exercise Item Styling */
+.exercise-item {
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-left: 4px solid #10b981;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.exercise-item:hover {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+/* Title for non-linked items (like exercise) */
+.item-title-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #064e3b;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+/* Responsive Grid - Update to 4 columns for larger screens */
+@media (min-width: 1400px) {
+  .recommendations-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .recommendations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1023px) {
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+}
