@@ -7,24 +7,6 @@
 [![React](https://img.shields.io/badge/React-v18+-blue)](https://reactjs.org/)
 
 ---
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Architecture](#architecture)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Project Structure](#project-structure)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
 ## 🎯 Overview
 
 **LuminaCode** is a full-stack mental health and wellness platform designed to provide comprehensive health management tools including:
@@ -103,7 +85,6 @@
 - **TensorFlow.js** - Mental health risk assessment
 - **Google Gemini API** - Wellness recommendations
 - **Nodemailer** - Email notifications
-- **Google OAuth** - Social authentication
 
 ### Development Tools
 - **VS Code** - Code editor
@@ -112,12 +93,6 @@
 - **npm** - Package management
 
 ---
-
-## 🏗️ Architecture
-
-
----
-
 ## 📥 Installation
 
 ### Prerequisites
@@ -126,22 +101,19 @@
 - Git
 
 ### Step 1: Clone Repository
-git clone https://github.com/GaganCN10/LuminaCode.git
+git clone https://github.com/GaganCN10/LuminaAI
 cd LuminaCode
 
-text
 
 ### Step 2: Install Backend Dependencies
 cd server
 npm install
 
-text
 
 ### Step 3: Install Frontend Dependencies
 cd ../client
 npm install
 
-text
 
 ### Step 4: Set Up MongoDB
 Start MongoDB locally
@@ -150,10 +122,3 @@ mongod
 Or use MongoDB Atlas connection string
 text
 
----
-
-## ⚙️ Configuration
-
-### Backend Environment Variables
-
-Create `server/.env`:
