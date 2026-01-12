@@ -2,14 +2,11 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const i18next = require('./i18n'); // Add this
-const middleware = require('i18next-http-middleware'); // Add this
 const medicalAnalysisRoutes = require('./routes/medicalAnalysis.js');
 const path = require('path');
 const bodyParser = require('body-parser');
 const screeningController = require('./controllers/screeningController.js');
 const screeningRoutes = require('./routes/screening');
-const webpush = require('web-push');
 const ocrRoutes = require('./routes/ocr');
 
 dotenv.config({ path: './.env' });
@@ -17,11 +14,7 @@ const subscriptions = [];
 const PUBLIC_VAPID_KEY = 'BPuXII5pz5rAa1mmjn9CLXz9n1boWdyfWfX2c4tXYmfH_jfQWxjmPA-g3IH6zA6Z7sFjFDjukv3LyzxuxRsJrE8';
 const PRIVATE_VAPID_KEY = '40XPCZgDrO4VFRolloOu95YEAydqPTe_XWnGOanYmcg';
 const app = express();
-webpush.setVapidDetails(
-  'mailto:your-email@example.com',
-  PUBLIC_VAPID_KEY,
-  PRIVATE_VAPID_KEY
-);
+
 app.use(cors({
     origin: 'http://localhost:5173',
     credentials: true,
@@ -29,7 +22,6 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept-Language'] // Add Accept-Language
 }));
 
-app.use(middleware.handle(i18next)); // Add this before other middleware
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 

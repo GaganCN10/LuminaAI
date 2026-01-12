@@ -6,7 +6,6 @@ import {jwtDecode} from "jwt-decode";
 import { useEffect, useState } from "react";
 import "../assets/componentsCss/UserDashboard.css"
 // import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './LanguageSwitcher';
 import SignOutButton from "./SignOutButton";
 
 export default function UserDashboard() {

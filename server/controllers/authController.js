@@ -170,7 +170,6 @@ exports.getNearbyDoctors = async (req, res) => {
 };
 
 
-const Report = require("../models/Report_OLD");
 
 // ⭐ DOCTOR: Get all reports assigned to this doctor
 exports.getMyReports = async (req, res) => {
