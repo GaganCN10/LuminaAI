@@ -10,7 +10,6 @@ const {
 } = require('../controllers/postController');
 const { protect } = require('../middlewares/auth');
 
-// All routes require authentication
 router.use(protect);
 
 // Post routes
